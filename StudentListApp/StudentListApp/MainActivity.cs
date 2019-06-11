@@ -47,38 +47,46 @@ namespace StudentListApp
             int position = e.Position;
             Student student = listStudents[position];
 
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-            AlertDialog alert = dialog.Create();
-            alert.SetTitle("Student's Information");
-            //alert.SetMessage("Complex Alert");
-            //alert.SetIcon(Resource.Drawable.alert);
+            FragmentTransaction transcation = FragmentManager.BeginTransaction();
+            MyDialog signup = new MyDialog(student);
+            signup.Show(transcation, "Dialog Fragment");
 
-            LayoutInflater inflater = (LayoutInflater)this.GetSystemService(Context.LayoutInflaterService);
-            View view = inflater.Inflate(Resource.Layout.layout_eleves_infos, null);
-            alert.SetView(view);
 
-            TextView text_Nom = view.FindViewById<TextView>(Resource.Id.Nom_tv);
-            text_Nom.Text = "Nom: "+student.Nom;
-            TextView text_Prenom = view.FindViewById<TextView>(Resource.Id.Prenom_tv);
-            text_Prenom.Text = "Prenom:" + student.Prenom;
+            /*
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                        AlertDialog alert = dialog.Create();
+                        alert.SetTitle("Student's Information");
+                        //alert.SetMessage("Complex Alert");
+                        //alert.SetIcon(Resource.Drawable.alert);
 
-            TextView text_age = view.FindViewById<TextView>(Resource.Id.Age_tv);
-            text_age.Text = "Age: "+ student.Age;
-            TextView text_Address = view.FindViewById<TextView>(Resource.Id.Prenom_tv);
-            text_Address.Text = "Addess: "+student.Adresse;
+                        LayoutInflater inflater = (LayoutInflater)this.GetSystemService(Context.LayoutInflaterService);
+                        View view = inflater.Inflate(Resource.Layout.layout_eleves_infos, null);
+                        alert.SetView(view);
 
-            ImageView image_iv = view.FindViewById<ImageView>(Resource.Id.image_iv);
-            image_iv.SetImageResource(student.Image);
+                        TextView text_Nom = view.FindViewById<TextView>(Resource.Id.Nom_tv);
+                        text_Nom.Text = "Nom: "+student.Nom;
+                        TextView text_Prenom = view.FindViewById<TextView>(Resource.Id.Prenom_tv);
+                        text_Prenom.Text = "Prenom:" + student.Prenom;
 
-            alert.SetButton("OK", (c, ev) =>
-            {
-                // Ok button click task  
-                //string Nom = text_Nom.Text;
-                //string Prenom = text_Prenom.Text;
-                //Toast.MakeText(this, "Nom = " + Nom + " Prenom= " + Prenom, ToastLength.Long).Show();
-            });
-            alert.SetButton2("CANCEL", (c, ev) => { });
-            alert.Show();
+                        TextView text_age = view.FindViewById<TextView>(Resource.Id.Age_tv);
+                        text_age.Text = "Age: "+ student.Age;
+                        TextView text_Address = view.FindViewById<TextView>(Resource.Id.Prenom_tv);
+                        text_Address.Text = "Addess: "+student.Adresse;
+
+                        ImageView image_iv = view.FindViewById<ImageView>(Resource.Id.image_iv);
+                        image_iv.SetImageResource(student.Image);
+
+                        alert.SetButton("OK", (c, ev) =>
+                        {
+                            // Ok button click task  
+                            //string Nom = text_Nom.Text;
+                            //string Prenom = text_Prenom.Text;
+                            //Toast.MakeText(this, "Nom = " + Nom + " Prenom= " + Prenom, ToastLength.Long).Show();
+                        });
+                        alert.SetButton2("CANCEL", (c, ev) => { });
+                        alert.Show();
+
+                */
         }
     }
 }

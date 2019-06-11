@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="gridView_Adapter.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MyDialog.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
@@ -105,6 +106,9 @@
     <AndroidResource Include="Resources\layout\layout_eleves_infos.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\dialogsignup.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
