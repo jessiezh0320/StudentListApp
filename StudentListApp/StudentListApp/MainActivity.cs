@@ -48,8 +48,14 @@ namespace StudentListApp
             Student student = listStudents[position];
 
             FragmentTransaction transcation = FragmentManager.BeginTransaction();
-            MyDialog signup = new MyDialog(student);
-            signup.Show(transcation, "Dialog Fragment");
+            //MyDialog signup = new MyDialog(student);
+            //signup.Show(transcation, "Dialog Fragment");
+
+            //FragmentManager fm = getSupportFragmentManager();
+
+            DialogFragment2 alertdFragment = new DialogFragment2();
+            // Show Alert DialogFragment
+            alertdFragment.Show(transcation, "Alert Dialog Fragment");
 
 
             /*

@@ -4,7 +4,7 @@
     <SelectedDevice>Google Pixel</SelectedDevice>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
-    <DefaultDevice>device90</DefaultDevice>
+    <DefaultDevice>mydevice6_0</DefaultDevice>
     <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>
